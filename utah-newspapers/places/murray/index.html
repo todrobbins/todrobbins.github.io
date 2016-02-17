@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="../../css/main.css">
+  <title>Murray, Salt Lake, Utah - Utah Newspapers Data Viewer</title>
+</head>
+<body>
+  <a href="mailto:utahnewspapers@gmail.com"><div class="emailus">Do you know more or have suggestions? Email me.</div></a>
+  <h1>Murray, <a href="../salt-lake-county/">Salt Lake</a>, <a href="../../">Utah</a></h1>
+
+  <section class="summary">
+    <p>Murray is a city situated on the Wasatch Front in the core of Salt Lake Valley in the U.S. state of Utah. Named for territorial governor Eli Murray, it is the state's fourteenth largest city. <a href="https://en.wikipedia.org/wiki/Murray,_Utah"><span>Wikipedia</span></a></p>
+  </section>
+  <div id="map"></div>
+  <section>
+    <h2>Newspapers</h2>
+    <ul>
+      <li><a href="../../newspapers/american-eagle/"><em>The American Eagle</em></a></li>
+      <li><a href="../../newspapers/murray-eagle"><em>Murray Eagle</em></a></li>
+    </ul>
+  </section>
+  <a href="../../"><span class="back">&larr; Back</span></a>
+
+    <script type="text/javascript">
+      L.mapbox.accessToken = 'pk.eyJ1IjoidG9kcm9iYmlucyIsImEiOiJ3cTUyNjVrIn0.8ozG-L3QDKblEshkqiEHFg';
+      L.mapbox.map('map', 'todrobbins.icbegkch').setView([40.6625,-111.8933], 13);
+    </script>
+</body>
+</html>

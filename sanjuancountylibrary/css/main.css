@@ -1,0 +1,145 @@
+html {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+body {
+  background: url('../images/redwall-small.png');
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  font-weight: 100;
+  color: #666;
+}
+
+h3 {
+  font-weight: 200;
+  text-decoration: italic;
+  color: #555;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+a:link {
+  color: #333;
+  font-size: .9em;
+}
+
+a:hover {
+  background: gold;
+}
+
+a:visited {
+  color: #666;
+}
+
+.mainContainer {
+  max-width: 1024px;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 1em 0 0 1em;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.6);
+}
+
+.logo {
+  float: right;
+  width: 150px;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.navBar {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em 0;
+  border-bottom: 1px solid #666;
+}
+
+.navItem {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.bluffContainer {
+  display: flex;
+  justify-content: flex-end; 
+  flex-direction: column;
+  float: right;
+  width: 40%;
+  height: 405px;
+  background: url('../images/blanding-remodel.png') no-repeat center center;
+  background-size: cover;
+  margin: 1em 0 2em 2em;
+  z-index: 999;
+}
+
+.bluffQuote {
+  align-self: flex-end;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  margin: 0;
+  padding: 1em 1em 1em 1em;
+  line-height: 1.4em;
+}
+
+.events {
+  background: gold;
+  display: inline-block;
+  width: auto;
+  padding: 1em;
+  box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.2);
+}
+
+.events h2 {
+  border-bottom: 1px solid #666;
+}
+
+.author {
+  float: right;
+  margin-top: 1em;
+}
+
+.clearfix {
+  border: none;
+}
+
+footer {
+  padding: 1em 0 1em 0;
+}
+
+@media screen and (max-width: 640px) {
+  .mainContainer {
+    padding-right: 1em;
+  }
+
+  .bluffContainer {
+    float: none;
+    width: auto;
+    margin: 1em 0 2em 0;
+  }
+
+  .events {
+    width: auto;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .navItem {
+    display: block;
+    margin-bottom: 1.4em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,98 @@
+div {
+  background-color: #fff;
+  text-align: right;
+  width: 220px;
+  height: 170px;
+  border: 10px solid red;
+  margin: 200px 200px 200px 200px;
+  -webkit-box-shadow:
+    0 0 0 10px yellow,
+    0 0 0 20px orange,
+    0 0 0 30px blue,
+    0 0 0 40px black,
+    0 0 0 50px red,
+    0 0 0 60px yellow,
+    0 0 0 70px orange,
+    0 0 0 80px blue,
+    0 0 0 90px black,
+    0 0 0 100px red,
+    0 0 0 110px yellow,
+    0 0 0 120px orange,
+    0 0 0 130px blue
+  ;
+  -moz-box-shadow:
+    0 0 0 10px yellow,
+    0 0 0 20px orange,
+    0 0 0 30px blue,
+    0 0 0 40px black,
+    0 0 0 50px red,
+    0 0 0 60px yellow,
+    0 0 0 70px orange,
+    0 0 0 80px blue,
+    0 0 0 90px black,
+    0 0 0 100px red,
+    0 0 0 110px yellow,
+    0 0 0 120px orange,
+    0 0 0 130px blue
+  ;
+  -o-box-shadow:
+    0 0 0 10px yellow,
+    0 0 0 20px orange,
+    0 0 0 30px blue,
+    0 0 0 40px black,
+    0 0 0 50px red,
+    0 0 0 60px yellow,
+    0 0 0 70px orange,
+    0 0 0 80px blue,
+    0 0 0 90px black,
+    0 0 0 100px red,
+    0 0 0 110px yellow,
+    0 0 0 120px orange,
+    0 0 0 130px blue
+  ;
+  box-shadow:
+    0 0 0 10px yellow,
+    0 0 0 20px orange,
+    0 0 0 30px blue,
+    0 0 0 40px black,
+    0 0 0 50px red,
+    0 0 0 60px yellow,
+    0 0 0 70px orange,
+    0 0 0 80px blue,
+    0 0 0 90px black,
+    0 0 0 100px red,
+    0 0 0 110px yellow,
+    0 0 0 120px orange,
+    0 0 0 130px blue
+  ;
+}
+
+#dot {
+  -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+          border-radius: 50px
+}
+
+div h1 { padding: .4em; font-family: Helvetica, Arial; margin-top: 0; margin-bottom: 0; }
+h2 { 
+	font-family: Helvetica, Arial; 
+	font-size: 1.5em;
+	margin-left: 50px;
+	text-align: left;
+	padding: .5em;
+	}
+
+p { font-family: Helvetica, Arial; font-size: 1em; margin-left: 50px; text-align: left; }
+ul { 
+	list-style: square;
+	font-family: Helvetica, Arial; 
+	font-size: 1em; 
+	margin-left: 50px;
+	text-align: left; 
+	}
+
+a { font-family: Helvetica, Arial; }
+a:link {color:#000;}
+a:visited {color:#888;}
+a:hover {color:blue;}
+a:active {color:#000;}

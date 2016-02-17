@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON Test</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript">
+	$.getJSON( "contact.json", function( data ) {
+	  var items = [];
+	  $.each( data, function( key, val ) {
+	    items.push( "<tr><td class='key'>"+ key + "</td><td id='" + key + "'>" + val + "</td></tr>" );
+	  });
+	 
+	  $( "<table/>", {
+	    "class": "my-new-list",
+	    html: items.join( "" )
+	  }).appendTo( "body" );
+	});
+	</script>
+	<style>
+	tr { padding: .5em; }
+	td { border: 1px solid gray; padding: .5em; background: #eee; }
+	.key { font-weight: bold; }
+	</style>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+html {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  font-family: 'Open Sans', Helvetica, Arial;
+}
+
+body {
+  margin-top: 2em;
+}
+.wrapper {
+	padding: 0 1em 1em 1em;
+	margin: 0 auto;
+	max-width: 60em; 
+}
+.byline {
+	margin-top: 0;
+  font-size: 1.2em;
+  font-weight: 100;
+  float: right;
+  font-style: italic;
+}
+.logo {
+	max-width: 10em;
+  margin-bottom: 2em;
+}
+
+nav ul a:link {
+  color: white;
+  text-decoration: none;
+}
+nav ul a:active {
+  color: white;
+}
+nav ul a:visited {
+  color: white;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  margin: 0 0 1em 0;
+}
+
+nav ul li {
+  background: #427556;
+  text-align: center;
+  display: inline;
+  padding: .2em .9em;
+  margin: 0;
+  line-height: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all .4s ease;
+}
+
+nav ul li:hover {
+  border-top: 4px solid #427556;
+  border-bottom: 4px solid #427556;
+}
+
+/*nav ul li:first-child {
+  padding-left: 0;
+}*/
+
+article {
+  margin-top: 3em;
+}
+
+article h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}

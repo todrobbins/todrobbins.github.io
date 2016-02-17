@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+  <title>HMS Acacia | Old Weather Reader</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta name="description" content="A web viewer for materials related to the Old Weather Project." /> 
+  <meta name="language" content="English" /> 
+  <meta name="DC.title" content="Old Weather Reader Prototype" /> 
+  <meta name="DC.creator" content="Tod Robbins" />
+  
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <link rel="stylesheet" href="../css/style.css" />
+  
+  <!-- scripts at bottom of page -->
+
+</head>
+<body class="demos ">
+  
+  <nav id="site-nav">
+    <h1><a href="../index.html">Old Weather Reader</a></h1>
+
+    <h2>About</h2>
+    
+    <ul>        
+          <li><a href="#">The Project</a>
+          <li><a href="#">The History</a>
+          <li><a href="#">The Data</a>
+          <li><a href="#">The Team</a>
+    </ul>
+    
+    <section id="options" class="clearfix">
+
+  
+      <h3>Filters</h3>
+      <hr/>
+      <h4>Entity Type</h4>
+      <ul id="filters" class="option-set clearfix" data-option-key="filter">
+
+        <li><a href="#filter" data-option-value="*" class="selected">show all</a></li>
+        <li><a href="#filter" data-option-value=".ship">ship</a></li>
+        <li><a href="#filter" data-option-value=".person">person</a></li>
+        <li><a href="#filter" data-option-value=".hms">HMS</a></li>
+        <li><a href="#filter" data-option-value=".usrcs">USRCS</a></li>
+
+      </ul>
+        
+      <h4>Vessel Type</h4>  
+      <ul id="filters" class="option-set clearfix" data-option-key="filter">
+
+        <li><a href="#filter" data-option-value="*" class="selected">show all</a></li>
+        <li><a href="#filter" data-option-value=".armed-merchant-cruiser">armed merchant cruiser</a></li>
+        <li><a href="#filter" data-option-value=".armored-cruiser">armored cruiser</a></li>
+        <li><a href="#filter" data-option-value=".cruiser">cruiser</a></li>
+        <li><a href="#filter" data-option-value=".battleship">battleship</a></li>
+        <li><a href="#filter" data-option-value=".despatch-vessel">despatch vessel</a></li>
+        <li><a href="#filter" data-option-value=".light-cruiser">light cruiser</a></li>        
+        <li><a href="#filter" data-option-value=".sloop">sloop</a></li>
+        <li><a href="#filter" data-option-value=".steamer">steamer</a></li>
+        
+      </ul>
+
+
+  
+    <h3>Sort</h3>
+
+    <ul id="sort-by" class="option-set clearfix" data-option-key="sortBy">
+      <li><a href="#sortBy=original-order" data-option-value="original-order" class="selected" data>original-order</a></li>
+      <li><a href="#sortBy=name" data-option-value="name">name</a></li>
+<!--      <li><a href="#sortBy=name" data-option-value="name">name</a></li>
+      <li><a href="#sortBy=weight"  data-option-value="weight">weight</a></li>
+      <li><a href="#sortBy=number" data-option-value="number">number</a></li>-->
+      <li><a href="#sortBy=vessel-type"  data-option-value="vesseltype">vessel-type</a></li>
+      <li><a href="#sortBy=category" data-option-value="category">category</a></li>
+      <li><a href="#sortBy=random" data-option-value="random">random</a></li>
+    </ul>
+
+    <h3>Sort direction</h3>
+
+    <ul id="sort-direction" class="option-set clearfix" data-option-key="sortAscending">
+      <li><a href="#sortAscending=true" data-option-value="true" class="selected">sort ascending</a></li>
+      <li><a href="#sortAscending=false" data-option-value="false">sort descending</a></li>
+    </ul>
+
+
+  
+    <h3>Layout modes</h3>
+
+    <ul id="layouts" class="option-set clearfix" data-option-key="layoutMode">
+      <li><a href="#masonry" data-option-value="masonry" class="selected">masonry</a></li>
+      <li><a href="#fitRows" data-option-value="fitRows">fitRows</a></li>
+      <li><a href="#cellsByRow" data-option-value="cellsByRow">cellsByRow</a></li>
+      <li><a href="#straightDown" data-option-value="straightDown">straightDown</a></li>
+      <li><a href="#masonryHorizontal" data-option-value="masonryHorizontal" class="horizontal">masonryHorizontal</a></li>
+      <li><a href="#fitColumns" data-option-value="fitColumns" class="horizontal">fitColumns</a></li>
+      <li><a href="#cellsByColumn" data-option-value="cellsByColumn" class="horizontal">cellsByColumn</a></li>
+      <li><a href="#straightAcross" data-option-value="straightAcross" class="horizontal">straightAcross</a></li>
+
+    </ul>
+
+<p>Isotope by <a href="http://desandro.com">David DeSandro</a> / <a href="http://metafizzy.co">Metafizzy</a></p>
+
+</section> <!-- #options -->
+    
+  </nav> <!-- #site-nav -->
+  
+<section id="content">
+
+
+<h1>HMS Acacia</h1>
+<!--<div id="container" class="clickable clearfix">
+
+    <div class="element ship sloop hms   " data-category="ship">
+	  <img src="img/acacia.jpeg"/>
+      <h2 class="name">Acacia</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Sloop</p>
+ 	  <a href="ship/acacia.html" alt="More info"><img src="img/info.png" class="info"/></a>
+    </div>
+        
+    <div class="element ship armored-cruiser hms   " data-category="ship">
+	  <img src="img/achilles.jpeg"/>
+      <h2 class="name">Achilles</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Armored Cruiser</p>
+    </div>
+        
+    <div class="element ship battleship hms   " data-category="ship">
+	  <img src="img/africa.jpeg"/>
+      <h2 class="name">Africa</h2>
+	  <img src="img/200pxHMS.png" class="flag" alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Battleship</p>
+    </div>
+       
+    <div class="element ship despatch-vessel   " data-category="ship">
+	  <img src="img/alacrity.jpeg"/>
+      <h2 class="name">Alacrity</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Despatch Vessel</p>
+    </div>
+        
+    <div class="element ship battleship hms   " data-category="ship">
+	  <img src="img/albemarle.jpeg"/>
+      <h2 class="name">Albemarle</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Battleship</p>
+    </div>
+        
+    <div class="element ship battleship hms   " data-category="ship">
+      <img src="img/albion.jpeg"/>
+      <h2 class="name">Albion</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Battleship</p>
+    </div>
+
+    <div class="element ship steamer usrcs   " data-category="ship">
+      <img src="img/bear.jpg"/>
+      <h2 class="name">Bear</h2>
+	  <img src="img/200pxUSRCS.png" class="flag" alt="United States Revenue Cutter Service"/>
+    	  <p class="vessel-type">Steamer</p>
+    </div>
+
+    <div class="element ship armed-merchant-cruiser hms   " data-category="ship">
+      <img src="img/carmania.jpeg"/>
+      <h2 class="name">Carmania</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Armed Merchant Cruiser</p>
+    </div>
+    
+    <div class="element ship cruiser hms   " data-category="ship">
+      <img src="img/carnarvon.jpeg"/>
+      <h2 class="name">Carnarvon</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>      
+    	  <p class="vessel-type">Cruiser</p>
+    </div>
+
+    <div class="element ship light-cruiser hms   " data-category="ship">
+      <img src="img/caroline.jpeg"/>
+      <h2 class="name">Caroline</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Light Cruiser</p>
+    </div>
+
+    <div class="element ship steamer usrcs   " data-category="ship">
+      <img src="img/corwin.jpg"/>
+      <h2 class="name">Corwin</h2>
+	  <img src="img/200pxUSRCS.png" class="flag" alt="United States Revenue Cutter Service"/>
+    	  <p class="vessel-type">Steamer</p>
+    </div>
+
+    <div class="element ship steamer usrcs   " data-category="ship">
+      <img src="img/grant.jpg"/>
+      <h2 class="name">Grant</h2>
+	  <img src="img/200pxUSRCS.png" class="flag" alt="United States Revenue Cutter Service"/>
+    	  <p class="vessel-type">Steamer</p>
+    </div>
+
+    <div class="element ship steamer usrcs   " data-category="ship">
+      <img src="img/haida.jpg"/>
+      <h2 class="name">Haida</h2>
+	  <img src="img/200pxUSRCS.png" class="flag" alt="United States Revenue Cutter Service"/>
+    	  <p class="vessel-type">Steamer</p>
+    </div>
+
+    <div class="element ship cruiser hms   " data-category="ship">
+      <img src="img/hawkins.jpeg"/>
+      <h2 class="name">Hawkins</h2>
+	  <img src="img/200pxHMS.png" class="flag"  alt="Her Majesty's Ship"/>
+    	  <p class="vessel-type">Cruiser</p>
+    </div>
+
+<!--persons--
+  
+    <div class="element person hms   " data-category="person">
+      <img src="img/captain-picard.jpg"/>
+      <h2 class="name">Captain Picard</h2>
+    </div>
+
+    <div class="element person usrcs   " data-category="person">
+      <img src="img/captain-nemo.jpeg"/>
+      <h2 class="name">Captain Nemo</h2>
+    </div>
+  
+</div>-->
+
+<script src="../js/jquery-1.7.1.min.js"></script>
+<script src="../js/jquery.isotope.min.js"></script>
+<script src="../js/fake-element.js"></script>
+<script>
+  $(function(){
+    
+    var $container = $('#container');
+    
+    
+      // add randomish size classes
+      $container.find('.element').each(function(){
+        var $this = $(this),
+            number = parseInt( $this.find('.number').text(), 10 );
+        if ( number % 7 % 2 === 1 ) {
+          $this.addClass('width2');
+        }
+        if ( number % 3 === 0 ) {
+          $this.addClass('height2');
+        }
+      });
+    
+    $container.isotope({
+      itemSelector : '.element',
+      masonry : {
+        columnWidth : 20
+      },
+      masonryHorizontal : {
+        rowHeight: 120
+      },
+      cellsByRow : {
+        columnWidth : 240,
+        rowHeight : 240
+      },
+      cellsByColumn : {
+        columnWidth : 240,
+        rowHeight : 240
+      },
+      getSortData : {
+        vesseltype : function( $elem ) {
+          return $elem.find('.vessel-type').text();
+        },
+        category : function( $elem ) {
+          return $elem.attr('data-category');
+        },
+        number : function( $elem ) {
+          return parseInt( $elem.find('.number').text(), 10 );
+        },
+        weight : function( $elem ) {
+          return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
+        },
+        name : function ( $elem ) {
+          return $elem.find('.name').text();
+        }
+      }
+    });
+    
+    
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+
+
+    
+      // change layout
+      var isHorizontal = false;
+      function changeLayoutMode( $link, options ) {
+        var wasHorizontal = isHorizontal;
+        isHorizontal = $link.hasClass('horizontal');
+
+        if ( wasHorizontal !== isHorizontal ) {
+          // orientation change
+          // need to do some clean up for transitions and sizes
+          var style = isHorizontal ? 
+            { height: '80%', width: $container.width() } : 
+            { width: 'auto' };
+          // stop any animation on container height / width
+          $container.filter(':animated').stop();
+          // disable transition, apply revised style
+          $container.addClass('no-transition').css( style );
+          setTimeout(function(){
+            $container.removeClass('no-transition').isotope( options );
+          }, 100 )
+        } else {
+          $container.isotope( options );
+        }
+      }
+
+
+    
+      // change size of clicked element
+      $container.delegate( '.element', 'click', function(){
+        $(this).toggleClass('large');
+        $container.isotope('reLayout');
+      });
+
+      // toggle variable sizes of all elements
+      $('#toggle-sizes').find('a').click(function(){
+        $container
+          .toggleClass('variable-sizes')
+          .isotope('reLayout');
+        return false;
+      });
+
+
+    
+      $('#insert a').click(function(){
+        var $newEls = $( fakeElement.getGroup() );
+        $container.isotope( 'insert', $newEls );
+
+        return false;
+      });
+
+      $('#append a').click(function(){
+        var $newEls = $( fakeElement.getGroup() );
+        $container.append( $newEls ).isotope( 'appended', $newEls );
+
+        return false;
+      });
+
+
+    var $sortBy = $('#sort-by');
+    $('#shuffle a').click(function(){
+      $container.isotope('shuffle');
+      $sortBy.find('.selected').removeClass('selected');
+      $sortBy.find('[data-option-value="random"]').addClass('selected');
+      return false;
+    });
+
+
+  });
+</script>
+    
+    <footer>
+
+    Old Weather Reader by <a href="http://www.todrobbins.com">Tod Robbins</a> / <a href="http://pmel.noaa.gov/">National Oceanic and Atmospheric Administration</a> &copy; 2012
+
+    </footer>
+    
+  </section> <!-- #content -->
+
+</body>
+</html>

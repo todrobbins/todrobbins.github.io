@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Media queries</title>
+	<style type="text/css">
+	
+	/* Desktop */
+	
+	@media only screen and (min-width: 320px) {
+	 body { 
+	 	color: #000;
+	 	font-size: 2em;
+	 	font-family: Helvetica, sans-serif;
+	 	background: #eee;
+	 	/*
+	 	-moz-transition: all .2s ease-in-out;
+	 	-webkit-transition: all .2s ease-in-out;
+	 	transition: all .2s ease-in-out;
+	 	*/
+	 	padding: 2em;
+	 }
+	 #portrait {
+	 	display: inline;
+	 }
+	 #landscape {
+	 	display: none;
+	 }	 
+	}
+	@media only screen and (min-width: 800px) {
+	 body { 
+	 	color: #fff;
+	 	font-size: 2em;
+	 	font-family: Helvetica, sans-serif;
+	 	background: #333;
+	 	/*
+	 	-moz-transition: all .2s ease-in-out;
+	 	-webkit-transition: all .2s ease-in-out;
+	 	transition: all .2s ease-in-out;
+	 	*/
+	 	padding: 2em;
+	 }
+	 #portrait {
+	 	display: none;
+	 }
+	 #landscape {
+	 	display: inline;
+	 }
+	}	
+	
+	/* iPhone 5 */
+
+	@media only screen and (min-width: 560px) and (orientation: portrait) {
+	 body { 
+	 	color: #000;
+	 	font-size: 3em;
+	 	font-family: Helvetica, sans-serif;
+	 	background: #eee;
+	 	/*
+	 	-moz-transition: all .2s ease-in-out;
+	 	-webkit-transition: all .2s ease-in-out;
+	 	transition: all .2s ease-in-out;
+	 	*/
+	 	padding: 2em;
+	 }
+	 #portrait {
+	 	display: inline;
+	 }
+	 #landscape {
+	 	display: none;
+	 }	 
+	}
+	@media only screen and (max-device-width: 1136px) and (orientation: landscape) {
+	 body { 
+	 	color: #fff;
+	 	font-size: 2em;
+	 	font-family: Helvetica, sans-serif;
+	 	background: #333;
+	 	/*
+	 	-moz-transition: all .2s ease-in-out;
+	 	-webkit-transition: all .2s ease-in-out;
+	 	transition: all .2s ease-in-out;
+	 	*/
+	 	padding: 2em;
+	 }
+	 #portrait {
+	 	display: none;
+	 }
+	 #landscape {
+	 	display: inline;
+	 }
+	}	
+	</style>
+</head>
+<body>
+	<h1 id="portrait">Portrait mode!</h1>
+	<h1 id="landscape">Landscape mode!</h1>
+	
+	<p>This is a sentence made with words.</p>
+</body>
+</html>

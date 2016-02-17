@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery 001</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style>
+  body {
+    padding: 4em;
+    text-align: center;
+    font-family: Helvetica;
+  }
+	.box {
+		background: #000 url(images/anderson-daniel_small.png) 0px -25px;
+    display: inline-block;
+		background-size: cover;
+		position: relative;
+    top: 6em;
+		color: #fff;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		transition: all .6s ease;
+		box-shadow: 1px 4px 8px rgba(0,0,0,.99);
+		opacity: .9;
+    margin: 1em;
+	}
+	.box:hover {
+		-webkit-transform: scale(1.5, 1.5) skew(-2deg) rotate(4deg);
+		-moz-transform: scale(1.5, 1.5) skew(-2deg) rotate(4deg);
+		transform: scale(1.5, 1.5) skew(-2deg) rotate(4deg);
+		box-shadow: 1px 30px 40px rgba(0,0,0,.4);
+		cursor: pointer;
+		opacity: 1;
+    z-index: 999;
+	}
+  .flip:hover {
+    -webkit-transform: scale(1.7, 1.7) skew(-2deg) rotate(360deg);
+    -moz-transform: scale(1.7, 1.7) skew(-2deg) rotate(360deg);
+    transform: scale(1.7, 1.7) skew(-2deg) rotate(360deg);
+  }
+	</style>
+</head>
+<body>
+	<h1>jQuery 001</h1>
+	<div class="box">
+	</div>
+	<div class="box">
+	</div>
+	<div class="box">
+	</div>
+  <div class="box">
+  </div>
+  <div class="box">
+  </div>
+<script>
+function changeClass() {
+  $(this).toggleClass('flip');
+}
+$('.box').click(changeClass);
+</script>  
+</body>
+</html>

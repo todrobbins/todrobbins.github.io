@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <title>I am Tod Robbins</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-  <meta name="description" content="Tod Robbins is a hacker, librarian, designer, musician and a human." /> 
-  <meta name="language" content="English" /> 
-  <meta name="DC.title" content="Tod Robbins > hacker, librarian, designer, musician, human" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Tod Robbins is a hacker, librarian, designer, musician and a human." />
+  <meta name="language" content="English" />
+  <meta name="DC.title" content="Tod Robbins > hacker, librarian, designer, musician, human" />
   <meta name="DC.creator" content="Tod Robbins" />
   <meta name="viewport" content="width=device-width, minimal-ui">
   <meta name="p:domain_verify" content="823a22efb2d67a1c2ddc0750a2e2843c"/>
@@ -63,23 +63,28 @@
   renderer.setSize( window.innerWidth, window.innerHeight );
   document.body.appendChild( renderer.domElement );
 
-  var directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.2 );
-  directionalLight1.position.set( 0, 1, 0 );
+  var directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.001 );
+  directionalLight1.position.set( 0, 1, 2 );
 
-  var directionalLight2 = new THREE.DirectionalLight( "rgb(255,0,0)", 0.8 );
+  var directionalLight2 = new THREE.DirectionalLight( "rgb(155,0,220)", 0.8 );
   directionalLight2.position.set( 3, 3, 3 );
 
-  var geometry = new THREE.TorusGeometry( 10, 3, 200, 128 );
+  var geometry = new THREE.SphereGeometry( 10, 3, 1200, 128 );
+  var geometry2 = new THREE.SphereGeometry( 10, 3, 1200, 5 );
   var material = new THREE.MeshPhongMaterial();
   var cube = new THREE.Mesh( geometry, material );
-  scene.add( cube, directionalLight1, directionalLight2 );
-  camera.position.y = -10;
-  camera.position.z = 10;
+  var cube2 = new THREE.Mesh( geometry2, material );
+  scene.add( cube, cube2, directionalLight1, directionalLight2 );
+  camera.position.x = 10;
+  camera.position.y = 00;
+  camera.position.z = 20;
 
   var render = function () {
     requestAnimationFrame( render );
-    cube.rotation.x += 0.005;
-    cube.rotation.y += 0.005;
+    cube.rotation.x += 0.003;
+    cube.rotation.y += 0.003;
+    cube2.rotation.x += 0.003;
+    cube2.rotation.y += 0.003;
     renderer.render( scene, camera );
   };
 

@@ -70,11 +70,9 @@
   directionalLight2.position.set( 3, 3, 3 );
 
   var geometry = new THREE.SphereGeometry( 10, 3, 1200, 128 );
-  var geometry2 = new THREE.SphereGeometry( 10, 3, 1200, 5 );
   var material = new THREE.MeshPhongMaterial();
   var cube = new THREE.Mesh( geometry, material );
-  var cube2 = new THREE.Mesh( geometry2, material );
-  scene.add( cube, cube2, directionalLight1, directionalLight2 );
+  scene.add( cube, directionalLight1, directionalLight2 );
   camera.position.x = 10;
   camera.position.y = 00;
   camera.position.z = 20;
@@ -83,8 +81,6 @@
     requestAnimationFrame( render );
     cube.rotation.x += 0.003;
     cube.rotation.y += 0.003;
-    cube2.rotation.x += 0.003;
-    cube2.rotation.y += 0.003;
     renderer.render( scene, camera );
   };
 

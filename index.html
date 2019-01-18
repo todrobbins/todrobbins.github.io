@@ -11,14 +11,13 @@
   <meta name="p:domain_verify" content="823a22efb2d67a1c2ddc0750a2e2843c"/>
   <link href="https://twitter.com/todrobbins" rel="me">
   <link href="https://github.com/todrobbins" rel="me">
-  <link href="https://soundcloud.com/todgobblins" rel="me">
   <link rel="pingback" href="https://webmention.io/todrobbins.com/xmlrpc" />
   <link rel="webmention" href="https://webmention.io/todrobbins.com/webmention" />
   <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   <link rel="token_endpoint" href="https://todrobbins.com/token">
   <link rel="micropub" href="https://todrobbins.com/micropub">
   <style>
-    html, body { margin: 0; padding: 0; overflow: hidden; font-family: Helvetica, Arial, sans-serif; background: #47007e; color: #fff; }
+    html, body { margin: 0; padding: 0; overflow: hidden; font-family: Helvetica, Arial, sans-serif; background: #000; color: #fff; }
     h1 { font-size: 40px; font-weight: 200; }
     h2 { font-size: 20px; color: #ccc; font-weight: 100; padding-bottom: 14px; }
     p { font-size: 18px; }
@@ -58,7 +57,6 @@
     <h2>a hacker, librarian, designer, musician and a human.</h2>
     <p>@ <a href="https://github.com/todrobbins" rel="me">Github</a>, <a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a>, <a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a>, <a href="https://twitter.com/todrobbins" rel="me">Twitter</a></p>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
   <script>
   var scene = new THREE.Scene();
@@ -68,24 +66,38 @@
   renderer.setSize( window.innerWidth, window.innerHeight );
   document.body.appendChild( renderer.domElement );
 
-  var directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.001 );
+  var directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.011 );
   directionalLight1.position.set( 0, 1, 2 );
 
-  var directionalLight2 = new THREE.DirectionalLight( "rgb(155,0,220)", 0.8 );
+  var directionalLight2 = new THREE.DirectionalLight( "rgb(221, 79, 0)", 0.8 );
   directionalLight2.position.set( 3, 3, 3 );
 
-  var geometry = new THREE.SphereGeometry( 10, 3, 1200, 128 );
+  var light = new THREE.PointLight( 0xff0000, 1, 100 );
+  light.position.set( 50, 50, 50 );
+  scene.add( light );
+
+  var geometry = new THREE.TorusGeometry( 3, 6, 1200, 128 );
   var material = new THREE.MeshPhongMaterial();
   var cube = new THREE.Mesh( geometry, material );
   scene.add( cube, directionalLight1, directionalLight2 );
+
+  var geometry1 = new THREE.TorusGeometry( 3, 6, 1200, 128 );
+  var material1 = new THREE.MeshPhongMaterial();
+  var cube1 = new THREE.Mesh( geometry1, material1 );
+  scene.add( cube1, directionalLight1, directionalLight2 );
+
   camera.position.x = 10;
   camera.position.y = 00;
   camera.position.z = 20;
 
   var render = function () {
     requestAnimationFrame( render );
-    cube.rotation.x += 0.003;
-    cube.rotation.y += 0.003;
+    cube.rotation.x += 0.008;
+    cube.rotation.y += 0.008;
+    cube1.rotation.x += 0.016;
+    cube1.rotation.y += 0.016;
+    cube1.scale.x += 0.01;
+    cube.scale.y += 0.01
     renderer.render( scene, camera );
   };
 

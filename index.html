@@ -33,11 +33,16 @@
     }
     a { color: #fff; transition: color .3s linear; }
     a:hover { color: #000; }
+    .try-beaker { font-size: 1.4rem;  }
+    .try-beaker a { text-decoration: none; }
 
     footer {
+      transition: all ease-in-out .5s;
       position: absolute;
       bottom: 1rem;
     }
+
+    footer:hover { transform: scale(1.2); }
 
     /* media queries */
     @media screen and (max-width: 640px) {
@@ -48,7 +53,9 @@
     }
 
     @media screen and (max-width: 1136px) {
-
+      h1 { font-size: 3rem; }
+      h2 { font-size: 2rem; }
+      p { font-size: 2rem; }
     }
   </style>
 </head>
@@ -60,7 +67,7 @@
       <h2>a hacker,<br>librarian,<br>designer,<br>musician,<br>and a human.</h2>
       <p>@ <a href="https://github.com/todrobbins" rel="me">Github</a>, <a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a>, <a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a>, <a href="https://twitter.com/todrobbins" rel="me">Twitter</a></p>
       <footer>
-        <p>p2p mirror: <a href="dat://todrobbins.com" rel="me">dat://todrobbins.com</a></p>
+        <p>p2p mirror: <a href="dat://todrobbins.com" rel="me">dat://todrobbins.com</a><sup class="try-beaker"><a href="https://beakerbrowser.com/">* Try Beaker Browser</a></sup></p>
       </footer>
     </main>
   </div>

@@ -35,10 +35,10 @@ a:visited { color: #673630; text-decoration: none; }
 #content p:first-child { background: #eee;}
 #wrapper { display: block; background: #ECEDE8; padding: 1em 2em 2em 2em; border: 1px double #2B3E71; box-shadow: 0 10px 10px -6px #333; }
 .frame { max-width: 1020px; min-width: 250px; height: 240px; overflow: hidden; display: block;margin: 0 auto; border: solid 1px #A82C2C; box-shadow: 0 10px 10px -6px #777; margin-bottom: 30px; margin-top: 10px; opacity: .8;}
-.frame:hover .frame:select {opacity:1; cursor: pointer; box-shadow: 0 8px 4px -6px #777; -moz-transition: all .6s ease-in-out; 
-  -webkit-transition: all .6s ease-in-out;  
-  -ms-transition: all .6s ease-in-out;  
-  -o-transition: all .6s ease-in-out;  
+.frame:hover .frame:select {opacity:1; cursor: pointer; box-shadow: 0 8px 4px -6px #777; -moz-transition: all .6s ease-in-out;
+  -webkit-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out; }
 #tod { float: right; width: 240px; height: 240px; margin: 0 auto; margin-bottom: 20px; border: solid 1px #A82C2C; box-shadow: 0 10px 10px -6px #777; }
 #social { padding: 0; float: right; margin: 0; margin-bottom: 15px; }

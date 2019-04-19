@@ -17,91 +17,52 @@
   <link rel="token_endpoint" href="https://todrobbins.com/token">
   <link rel="micropub" href="https://todrobbins.com/micropub">
   <style>
-    html, body { margin: 0; padding: 0; overflow: hidden; font-family: Helvetica, Arial, sans-serif; background: #000; color: #fff; }
-    h1 { font-size: 40px; font-weight: 200; }
-    h2 { font-size: 20px; color: #ccc; font-weight: 100; padding-bottom: 14px; }
-    p { font-size: 18px; }
-    #overlay {
-      z-index: 9999;
-      background: none;
-      position: absolute;
-      top: 2em;
-      right: 6%;
-      margin-right: 2em;
+    @import url('dat://4505deef3a8f1d4258e8fd1be49c68ba3efc475308ce484a7f8164d4dcf3dba1/fonts/Source+Sans+Pro/style.css');
+
+    html, body {
+      font-size: 18px; margin: 0; padding: 0; overflow: hidden; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; background-image: linear-gradient( red, #f06d06 ); color: #fff;
     }
-    a { color: #1ac; transition: color .3s linear; }
-    a:hover { color: #fff; }
+    h1 { font-size: 4rem; font-weight: 600; }
+    h2 { font-size: 2.6rem; color: #000; font-weight: 300; padding-bottom: 14px; }
+    p { font-size: 2rem; font-weight: 300; }
+    #wrapper {
+      display: flex;
+      background: none;
+      justify-content: center;
+      align-items: center;
+    }
+    a { color: #fff; transition: color .3s linear; }
+    a:hover { color: #000; }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+    }
 
     /* media queries */
     @media screen and (max-width: 640px) {
-      h2 { font-size: 16px; padding-bottom: 14px; }
-      #overlay {
-        font-size: 20px;
-        top: 1em;
-        left: 1em;
-        margin: 1em;
-      }
+      #wrapper { padding: 1rem 2rem; }
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.8rem; }
+      p { font-size: 1.8rem; }
     }
 
     @media screen and (max-width: 1136px) {
-      #overlay {
-        top: -1em;
-        margin: 1em;
-      }
+
     }
   </style>
 </head>
+
 <body>
-  <div id="overlay">
-    <h1>I am Tod Robbins:</h1>
-    <h2>a hacker, librarian, designer, musician and a human.</h2>
-    <p>@ <a href="https://github.com/todrobbins" rel="me">Github</a>, <a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a>, <a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a></p>
+  <div id="wrapper">
+    <main>
+      <h1>Tod Robbins is</h1>
+      <h2>a hacker,<br>librarian,<br>designer,<br>musician,<br>and a human.</h2>
+      <p>@ <a href="https://github.com/todrobbins" rel="me">Github</a>, <a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a>, <a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a>, <a href="https://twitter.com/todrobbins" rel="me">Twitter</a></p>
+      <footer>
+        <p>p2p mirror: <a href="dat://todrobbins.com" rel="me">dat://todrobbins.com</a></p>
+      </footer>
+    </main>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
-  <script>
-  var scene = new THREE.Scene();
-  var aspect = window.innerWidth / window.innerHeight;
-  var camera = new THREE.PerspectiveCamera( 75, aspect, 0.1, 1000 );
-  var renderer = new THREE.WebGLRenderer();
-  renderer.setSize( window.innerWidth, window.innerHeight );
-  document.body.appendChild( renderer.domElement );
-
-  var directionalLight1 = new THREE.DirectionalLight( 0xffffff, 0.011 );
-  directionalLight1.position.set( 0, 1, 2 );
-
-  var directionalLight2 = new THREE.DirectionalLight( "rgb(221, 79, 0)", 0.8 );
-  directionalLight2.position.set( 3, 3, 3 );
-
-  var light = new THREE.PointLight( 0xff0000, 1, 100 );
-  light.position.set( 50, 50, 50 );
-  scene.add( light );
-
-  var geometry = new THREE.TorusGeometry( 3, 6, 1200, 128 );
-  var material = new THREE.MeshPhongMaterial();
-  var cube = new THREE.Mesh( geometry, material );
-  scene.add( cube, directionalLight1, directionalLight2 );
-
-  var geometry1 = new THREE.TorusGeometry( 3, 6, 1200, 128 );
-  var material1 = new THREE.MeshPhongMaterial();
-  var cube1 = new THREE.Mesh( geometry1, material1 );
-  scene.add( cube1, directionalLight1, directionalLight2 );
-
-  camera.position.x = 10;
-  camera.position.y = 00;
-  camera.position.z = 20;
-
-  var render = function () {
-    requestAnimationFrame( render );
-    cube.rotation.x += 0.003;
-    cube.rotation.y += 0.001;
-    cube1.rotation.x += 0.001;
-    cube1.rotation.y += 0.003;
-    cube1.scale.x += 0.01;
-    cube.scale.y += 0.01
-    renderer.render( scene, camera );
-  };
-
-  render();
-  </script>
 </body>
 </html>

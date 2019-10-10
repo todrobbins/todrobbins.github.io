@@ -34,16 +34,24 @@
     }
     a { color: #7d8fe8; transition: color .3s linear; }
     a:hover { color: #000; }
-    .try-beaker { font-size: 1.4rem;  }
+    .try-beaker { font-size: 1rem;  }
     .try-beaker a { text-decoration: none; }
 
+    .super {
+      vertical-align: super;
+      font-size: 1.2rem;
+    }
+
     footer {
-      transition: all ease-in-out .5s;
+      background: #f8f8f8;
       position: absolute;
+      padding: 0 1rem;
       bottom: 1rem;
     }
 
-    footer:hover { transform: scale(1.2); }
+    footer p {
+      font-size: 1.2rem;
+    }
 
     /* media queries */
     @media screen and (max-width: 640px) {
@@ -57,6 +65,7 @@
       h1 { font-size: 3rem; }
       h2 { font-size: 2rem; }
       p { font-size: 2rem; }
+      .try-beaker { font-size: 1rem;  }
     }
   </style>
 </head>
@@ -64,9 +73,17 @@
 <body>
   <div id="wrapper">
     <main>
-      <h1>Tod Robbins is</h1>
-      <h2>a hacker,<br>librarian,<br>designer,<br>musician,<br>and a human.</h2>
-      <p>@ <a href="https://github.com/todrobbins" rel="me">Github</a>, <a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a>, <a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a>, <a href="https://twitter.com/todrobbins" rel="me">Twitter</a></p>
+      <h1>Tod Robbins</h1>
+      <h2>friendly human 🏴</h2>
+      <p>@ <a href="https://joinmastodon.org/">Mastodon</a>
+        <a class="super" rel="me" href="https://anarchism.space/@todrobbins">anarchism.space</a> 
+        <a class="super" rel="me" href="https://digipres.club/@todrobbins">digipres.club</a> 
+        <a class="super" rel="me" href="https://mastodon.social/@todrobbins">mastodon.social</a>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/todrobbins" rel="me">Github</a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/todrobbins" rel="me">Twitter</a></p>
       <footer>
         <p>p2p mirror: <a href="dat://todrobbins.com" rel="me">dat://todrobbins.com</a><sup class="try-beaker"><a href="https://beakerbrowser.com/">* Try Beaker Browser</a></sup></p>
       </footer>

@@ -6,45 +6,72 @@ I hereby claim:
 
   * I am an admin of http://todrobbins.com
   * I am todrobbins (https://keybase.io/todrobbins) on keybase.
-  * I have a public key ASCo6nnEaTD8pIy8WVmDealZo_HeM-CDapD-2SnnxkcKRAo
+  * I have a public key with fingerprint 13EA EFA1 80B0 5890 F755  2741 17E1 BDB7 4FFC 96AB
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "010159bcd6f628b9e3ee41deb5eef50974c9d6d802bf1a1012cf879605c14fe4ad1a0a",
-            "host": "keybase.io",
-            "kid": "0120a8ea79c46930fca48cbc59598379a959a3f1de33e0836a90fed929e7c6470a440a",
-            "uid": "5fd381049207398d9114e3c39c0f6e00",
-            "username": "todrobbins"
-        },
-        "service": {
-            "hostname": "todrobbins.com",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "010159bcd6f628b9e3ee41deb5eef50974c9d6d802bf1a1012cf879605c14fe4ad1a0a",
+      "fingerprint": "13eaefa180b05890f755274117e1bdb74ffc96ab",
+      "host": "keybase.io",
+      "key_id": "17e1bdb74ffc96ab",
+      "kid": "010159bcd6f628b9e3ee41deb5eef50974c9d6d802bf1a1012cf879605c14fe4ad1a0a",
+      "uid": "5fd381049207398d9114e3c39c0f6e00",
+      "username": "todrobbins"
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.23"
-    },
-    "ctime": 1496674945,
-    "expire_in": 504576000,
     "merkle_root": {
-        "ctime": 1496674934,
-        "hash": "70b789e8b503db21dfd555c04292f74e6780bf0de0c8a5b273547b9c2cc20aa3632ecf8241af773f5f7ca407d7796416cf41b03f974721bf711ec9610c4861f2",
-        "seqno": 1144429
+      "ctime": 1590598062,
+      "hash_meta": "f4cd0d099183b59bbbf774057a3d7ff32e572c81808efef63c507f29371c72d2",
+      "seqno": 16422065
     },
-    "prev": "ecd3f303ecec4b2544545c312d6865dbdff909fe4a97ac8dce5505efedcb139e",
-    "seqno": 36,
-    "tag": "signature"
+    "revoke": {
+      "sig_ids": [
+        "88f8852c745c78f6b8794c4064e17045007076b9375de14534db973fadb7f4fd0f"
+      ]
+    },
+    "service": {
+      "hostname": "todrobbins.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1590598084,
+  "expire_in": 157680000,
+  "prev": "5a8c426b150d2593792bed12411a3eaf1f3324bd1a7b3a00a7b1195543a99c28",
+  "seqno": 122,
+  "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgqOp5xGkw/KSMvFlZg3mpWaPx3jPgg2qQ/tkp58ZHCkQKp3BheWxvYWTFAvl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNTliY2Q2ZjYyOGI5ZTNlZTQxZGViNWVlZjUwOTc0YzlkNmQ4MDJiZjFhMTAxMmNmODc5NjA1YzE0ZmU0YWQxYTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYThlYTc5YzQ2OTMwZmNhNDhjYmM1OTU5ODM3OWE5NTlhM2YxZGUzM2UwODM2YTkwZmVkOTI5ZTdjNjQ3MGE0NDBhIiwidWlkIjoiNWZkMzgxMDQ5MjA3Mzk4ZDkxMTRlM2MzOWMwZjZlMDAiLCJ1c2VybmFtZSI6InRvZHJvYmJpbnMifSwic2VydmljZSI6eyJob3N0bmFtZSI6InRvZHJvYmJpbnMuY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMyJ9LCJjdGltZSI6MTQ5NjY3NDk0NSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk2Njc0OTM0LCJoYXNoIjoiNzBiNzg5ZThiNTAzZGIyMWRmZDU1NWMwNDI5MmY3NGU2NzgwYmYwZGUwYzhhNWIyNzM1NDdiOWMyY2MyMGFhMzYzMmVjZjgyNDFhZjc3M2Y1ZjdjYTQwN2Q3Nzk2NDE2Y2Y0MWIwM2Y5NzQ3MjFiZjcxMWVjOTYxMGM0ODYxZjIiLCJzZXFubyI6MTE0NDQyOX0sInByZXYiOiJlY2QzZjMwM2VjZWM0YjI1NDQ1NDVjMzEyZDY4NjVkYmRmZjkwOWZlNGE5N2FjOGRjZTU1MDVlZmVkY2IxMzllIiwic2Vxbm8iOjM2LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQDymgdiLIoZ/lbFojOGeARYXn+iQy2mC8m7jOfLC3OM8sXhsNOEs6v6vfogKD/KQ8YW5xq3hpuXmxaoxxWclsw+oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBD8kUO56ZnVl1cvdi5NHSZLtu9EBEvU2mip9WKDkNTI6N0YWfNAgKndmVyc2lvbgE=
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMK5AnicrVNbaB1FGD6xrcVUU0uolwatLvRijHVmdmZn5hCrbWrAUguCVdBjTuea
+s+Tk7HF3cyMNWB/60lYRWiGCodqgsVFsEGzRYs2lIhUEiSDUB6sHKW1FtH0KR1tn
+g4Koj+7LsLvf9/3f//3/zN2yJNfY0Hr6yPto/f2XG76YGe7LdX05OjfsyUgPeflh
+r8csHqasTZIWe0Lt5T0AASRcKh3YADHJjW8MhtpIYowlgFOsuA40A0haKBwYKcso
+DwBREFuDhYYCCK/Ns2Gl28TVOKykThb6RhgrIAMSEMaBpYQgiiGkBkotKbZW8UBI
+RyxFScZw5qRIzKYwct/cS3HR3n/g/2fffYtyxGqfQYA5AtTnTHMIsfGVzxWwgQEg
+AyYmrohe49BppONIyrCSeCNtXq+Je8qmGEdRmsWr0jADOXeAcAYC5FoUSanYa1Lh
+uBYrDTTgHDJfug6ktJRiQKjwNbXWR4ZQpJhLjhlrbOArAqhF3KdQUaSRc5KY5yuR
+qxBghEBAnIXY9Ec9JquehN0uucTLP+sxZhkjSFFMFGU2kK5/rDAIsIEUYAIABTSQ
+TploAzHxsZac+la4vC22GljvuZGsWtwfqkXxbFT/imCTinqdqWocpZGKyu5fKU2r
++SyZdKiaYQeMLP6pUnQM7TbFEfpNnIRRxfXhkP8IjeE2zwxWw9gUwwxBaMCAe7Iy
+pj+bl2AKo0BCAjQirgWOpNEQuQ0TbvUstL6PsHRDptIXALgDQk4I9gXnCrG/pYjc
+gFLR7URddhWR9sXGG5n5tLA019CYu3HZDdkdyjXedOtfN+u24vJr+d3nym+Zndsf
+XJi4VDh1ZUt757WT79Ynvx58844drU3xZ+Of+JefHu+ALYffXjZxrrT558lfnzl7
+4c7VaOaJsy2DTe2PPjWw9oGl3+0d+nzVR7WD3+JXNtZeLpyvrXxvtF4avefYVLlr
+fqG2e83awyfK5Nj0lQ33XXz1p4XX0WtTSzpu3zM/fbXvUtNDsy9+MDBWeox3PmwK
+11u2/n7yQNzccWjHuo4tm9nR9m2d02+w2Z37fulqPb1izXo0Ob/16IXmm1edqh9s
+Wzd2pHkq90P943eehAc+PPHS1YHWM4XH/R/H+b7a8jPbD10PR+7+fvCbPXtXH2/e
+Jca23St/+2rihRUrL+6/a/8j50l9bvYPtvuC6Q==
+=gU1N
+-----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.

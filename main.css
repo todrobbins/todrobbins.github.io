@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,600;1,700;1,900&display=swap');
+
+html, body {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  background-image: radial-gradient(circle at center right, #fff, #ccc);
+}
+
+#subtitle {
+    padding-left: .6rem;
+}
+
+#wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.flexy {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+p {
+    line-height: 1.4;
+}
+
+
+a, a:visited {
+    color: #3344dd;
+    text-decoration: none;
+    transition: .2s all ease-in-out;
+    padding: .8rem .6rem;
+    width: fit-content;
+}
+
+a:hover, a:active {
+    color: black;
+    transform:translateY(-.3rem);
+}
+
+#flag {
+    font-size: 2rem;
+    padding-left: .6rem;
+}
+
+@media screen and (max-width: 1440px) {
+    #wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #wrapper {
+        margin: 2rem;
+    }
+}

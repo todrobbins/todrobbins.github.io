@@ -32,37 +32,93 @@
     <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
     <link rel="token_endpoint" href="https://todrobbins.com/token" />
     <link rel="micropub" href="https://todrobbins.com/micropub" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
   <div id="wrapper">
-    <h1>Tod Robbins</h1>
-    <p>
-      <span id="subtitle">friendly human</span><br>
-      <span id="flag">🏴&nbsp;🌹</span>
+    <h1>tod robbins <span id="subtitle">friend+wizard</span></h1>
+    
+    <h2>accounts</h2>
+    <p class="flexy">
+      <a href="https://bsky.app/profile/todrobbins.com" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Bluesky</a><br>
+      <a href="https://github.com/todrobbins" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> GitHub</a><br>
+      <a href="https://localwiki.org/Users/todd.d.robbins" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> LocalWiki</a><br>
+      <a href="https://social.coop/@todrobbins" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Mastodon</a><br>
+      <a href="https://openlibrary.org/people/tdamcbigity" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Open Library</a><br>
+      <a href="https://soundcloud.com/todgobblins" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Soundcloud</a><br>
+      <a href="https://twitter.com/todrobbins"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Twitter</a><br>
+      <a href="https://www.wikidata.org/wiki/User:Todrobbins" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Wikidata</a><br>
+      <a href="https://en.wikipedia.org/wiki/User%3ATodrobbins" rel="me"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Wikipedia</a>
     </p>
     
-    <h2>identity</h2>
+    <h2>projects</h2>
     <p class="flexy">
-      <a href="https://github.com/todrobbins" rel="me">GitHub</a>
-      <a href="https://localwiki.org/Users/todd.d.robbins" rel="me">LocalWiki</a>
-      <a href="https://social.coop/@todrobbins" rel="me">Mastodon</a>
-      <a href="https://openlibrary.org/people/tdamcbigity" rel="me">Open Library</a>
-      <a href="https://soundcloud.com/todgobblins" rel="me">Soundcloud</a>
-      <a href="https://twitter.com/todrobbins">Twitter</a>
-      <a href="https://www.wikidata.org/wiki/User:Todrobbins" rel="me">Wikidata</a>
-      <a href="https://en.wikipedia.org/wiki/User%3ATodrobbins" rel="me">Wikipedia</a>
-    </p>
-    
-    <h2>praxis</h2>
-    <p class="flexy">
-      <a href="https://mormonbiography.org/">Dictionary of Mormon Biography</a><br>
-      <a href="https://www.electionsutah.org/">Elections Utah</a><br>
-      <a href="https://renouncewar.org/">Renounce War</a><br>
-      <a href="https://utahmutualaid.org/">Utah Valley Mutual Aid</a><br>
+      <a href="https://mormonbiography.org/"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Dictionary of Mormon Biography</a><br>
+      <a href="https://www.electionsutah.org/"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Elections Utah</a><br>
+      <a href="https://renouncewar.org/"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Renounce War</a><br>
+      <a href="https://utahmutualaid.org/"><img class="pointer" src="images/pointer.gif" alt=""finger pointing right> Utah Valley Mutual Aid</a><br>
     </p>
   </div>
-  <div class="empty-space"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.backgroundColor = getRandomPastelColor();
+    });
+
+    function getRandomPastelColor() {
+        let r = Math.floor((Math.random() * 127) + 127); // Ensures a soft tone (127-255)
+        let g = Math.floor((Math.random() * 127) + 127);
+        let b = Math.floor((Math.random() * 127) + 127);
+
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("a");
+
+      links.forEach(link => {
+          link.addEventListener("mouseenter", function () {
+              const randomColor = getRandomColor();
+              const inverseColor = getHighContrastInverse(randomColor);
+              
+              this.style.color = randomColor;
+              this.style.backgroundColor = inverseColor;
+          });
+
+          link.addEventListener("mouseleave", function () {
+              this.style.color = "";
+              this.style.backgroundColor = "";
+          });
+      });
+
+      function getRandomColor() {
+          let color = Math.floor(Math.random() * 16777215).toString(16);
+          return `#${color.padStart(6, '0')}`;
+      }
+
+      function getHighContrastInverse(hex) {
+          let r = parseInt(hex.substring(1, 3), 16);
+          let g = parseInt(hex.substring(3, 5), 16);
+          let b = parseInt(hex.substring(5, 7), 16);
+
+          // Use a brightness threshold to decide between white and black
+          let brightness = (r * 0.299 + g * 0.587 + b * 0.114);
+
+          if (brightness > 128) {
+              // If the color is bright, use a darker contrast
+              r = Math.max(r - 100, 0);
+              g = Math.max(g - 100, 0);
+              b = Math.max(b - 100, 0);
+          } else {
+              // If the color is dark, use a brighter contrast
+              r = Math.min(r + 150, 255);
+              g = Math.min(g + 150, 255);
+              b = Math.min(b + 150, 255);
+          }
+
+          return `rgb(${r}, ${g}, ${b})`;
+      }
+  });
+  </script>
 </body>
 </html>
